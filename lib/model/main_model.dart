@@ -6,6 +6,7 @@ import 'package:car_service/vo/setting.dart';
 import 'package:car_service/vo/user.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import '../constants.dart';
+import '../helper/api_helper.dart';
 import 'base_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -84,7 +85,7 @@ class MainModel extends ChangeNotifier {
 
   Future<void> _listenSetting() async {
     try {
-      getSettings().listen((event) { 
+      getSettings().listen((event) {
         setting = event;
         for (final m in models) {
           m.initSetting(event);
@@ -114,6 +115,13 @@ class MainModel extends ChangeNotifier {
 
   signinWithEmail(String email, String password) {
     user = User(id: "1", email: email, password: password);
+    notifyListeners();
+  }
+
+  onRating(double rating, String remark) async {
+    //  await requestAPI("/api/ratings", "POST",
+    //     payload: {}, token: await fb.getToken());
+
     notifyListeners();
   }
 }

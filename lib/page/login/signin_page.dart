@@ -98,7 +98,7 @@ class _SignInPageState extends State<SignInPage> {
                 }
                 if (value.length < 6) {
                   return AppTranslations.of(context)
-                      .text("signup.password_size");
+                      .text("login.password_size");
                 }
                 return null;
               })
@@ -163,9 +163,9 @@ class _SignInPageState extends State<SignInPage> {
   }
 
   _login() async {
-    // if (!_formKey.currentState!.validate()) {
-    //   return;
-    // }
+    if (!_formKey.currentState!.validate()) {
+      return;
+    }
     widget.onSignEmail(_emailCtl.text, _passwordCtl.text);
   }
 }

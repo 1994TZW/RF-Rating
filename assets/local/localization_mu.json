@@ -24,10 +24,12 @@
     "login.forgot_password": "စကားဝှက်ကိုမေ့နေပါသလား?",
     "login.title":"အကောင့်ဝင်ပါ",
     "login.instruction":"India's first wireless wireless\ncar cleaning company",
+    "login.password_size": "အနည်းဆုံးစာလုံး ၆ လုံး",
 
     "home.instruction":"ကျေးဇူးပြု၍ကျွန်ုပ်တို့၏ဝန်ဆောင်မှုကို အဆင့်သတ်မှတ်ပေးပါ",
     "home.done.btn":"လုပ်ဆောင်မည်",
     "home.remark":"အကြံပြုချက်များကို ရိုက်ထည့်နိုင်ပါသည်",
+    "home.progress.instruction":"ကျေးဇူးတင်ပါသည်။",
 
     "profile.title": "ကျွန်ုပ် ပရိုဖိုင်",
     "profile.email":"Email",

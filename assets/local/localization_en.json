@@ -24,10 +24,12 @@
     "login.forgot_password":"Forgot Password ?",
     "login.title":"Log in",
     "login.instruction":"India's first wireless wireless\ncar cleaning company",
+    "login.password_size": "At least 6 characters",
     
     "home.instruction":"Please Rate Our Service",
     "home.done.btn":"Done",
     "home.remark":"Please type in any suggestions",
+    "home.progress.instruction":"Thank you !",
 
     "profile.title":"Profile",
     "profile.email":"Email",

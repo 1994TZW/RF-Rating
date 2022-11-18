@@ -8,6 +8,9 @@ import 'package:car_service/helper/theme.dart';
 import 'package:car_service/model/main_model.dart';
 
 import 'package:car_service/widget/local_text.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../vo/setting.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -50,11 +53,11 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     MainModel mainModel = Provider.of<MainModel>(context);
-    PackageInfo? _packageInfo = mainModel.packageInfo;
+    PackageInfo? packageInfo = mainModel.packageInfo;
 
     _isSupport = mainModel.isSupport();
     _isOnline = mainModel.isOnline;
-    // print("mainModel.isLoaded>>>>${mainModel.isLoaded}>>>>>>>${mainModel.isLogin()}");
+  
     if (mainModel.isLoaded) {
       if (mainModel.isLogin()) {
         page = "/home";
@@ -75,7 +78,7 @@ class _SplashScreenState extends State<SplashScreen> {
         onPressed: () {
           _upgradeApp(
             context,
-            int.tryParse(_packageInfo?.buildNumber ?? "0") ?? 1,
+            int.tryParse(packageInfo?.buildNumber ?? "0") ?? 1,
           );
         },
         icon: const Icon(Feather.download, color: Colors.black),
@@ -113,7 +116,10 @@ class _SplashScreenState extends State<SplashScreen> {
             children: const <Widget>[
               Text(
                 "Car Service Centre",
-                style: TextStyle(fontSize: 18, color: Colors.black, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500),
               ),
             ],
           ),
@@ -125,39 +131,36 @@ class _SplashScreenState extends State<SplashScreen> {
                   padding: const EdgeInsets.only(top: 8.0),
                   child: Column(
                     children: <Widget>[
-                      LocalText(context, "offline.status",color: Colors.black),
+                      LocalText(context, "offline.status", color: Colors.black),
                     ],
                   ),
                 )
               : Container(),
           _loaded && !_isSupport
-            ?
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Version outdated, please update your app!",
-                  style: TextStyle(
-                      color: Colors.grey.shade400,
-                      fontWeight: FontWeight.bold)),
-              const SizedBox(height: 20),
-              upgradeAppButton
-            ],
-          ):Container()
+              ? Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Version outdated, please update your app!",
+                        style: TextStyle(
+                            color: Colors.grey.shade400,
+                            fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 20),
+                    upgradeAppButton
+                  ],
+                )
+              : Container()
         ],
       ),
     );
   }
 
   _upgradeApp(BuildContext context, int buildNum) async {
-    // MainModel mainModel = Provider.of<MainModel>(context, listen: false);
-    // Setting _setting = mainModel.setting!;
-    // if (_setting == null) return;
-    // if (_setting.supportBuildNum <= buildNum) {
-    //   // showMsgSnackBar(context, getLocalString(context, "app.latest_version"),
-    //   //     backgroundColor: Colors.green.shade400);
-    //   return;
-    // } else if (_setting.supportBuildNum > buildNum) {
-    //   // await launch(_setting.latestBuildUrl);
-    // }
+    MainModel mainModel = Provider.of<MainModel>(context, listen: false);
+    Setting? setting = mainModel.setting;
+    if (setting == null) return;
+    if (setting.supportBuildNum > buildNum) {
+      // ignore: deprecated_member_use
+      await launch(setting.latestBuildUrl);
+    }
   }
 }
