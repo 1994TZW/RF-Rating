@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "450783154656",
+    "firebase_url": "https://rf-rating-default-rtdb.firebaseio.com",
+    "project_id": "rf-rating",
+    "storage_bucket": "rf-rating.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450783154656:android:8d96e35e45e6460b155b85",
+        "android_client_info": {
+          "package_name": "com.tzw.rating.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450783154656-0o1tjllcbok4jtnous0mtdsh590sddnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq4QP6StFwLi9R-XVnz2CbnDKx_zxpZec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450783154656-0o1tjllcbok4jtnous0mtdsh590sddnl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

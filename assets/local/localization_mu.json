@@ -1,0 +1,38 @@
+{
+    "btn.cancel": "မလုပ်နဲ့",
+    "btn.ok": "အိုကေ",
+    "btn.logout": "အကောင့်ထွက်ရန်",
+    "btn.save": "သိမ်းဆည်းမည်",
+    "btn.apply": "Apply",
+    "btn.request": "တောင်းဆိုမည်",
+    "btn.add": "ထည့်မည်",
+    "btn.update": "ပြင်မည်",
+    "btn.print": "ပရင့်ထုပ်မည်",
+    "btn.download": "ဒေါင်းမည်",
+    "btn.new":"အသစ်ထည့်မည်",
+
+    "app.app_upgrade":"Download App Update",
+    "app.latest_version":"နောက်ဆုံးဗားရှင်း",
+
+    "language.selection.title": "ဘာသာစကား ရွေးချယ်ပါ",
+
+    "login.email": "အီးမေးလ်",
+    "login.email_empty": "ကျေးဇူးပြု၍ သင့်အီးမေးလ်ထည့်ပါ",
+    "login.password": "လျှို့ဝှက်နံပါတ်",
+    "login.password_empty": "ကျေးဇူးပြု၍ သင့်လျှို့ဝှက်နံပါတ်ထည့်ပါ",
+    "login.btn":"အကောင့် ဝင်မည်",
+    "login.forgot_password": "စကားဝှက်ကိုမေ့နေပါသလား?",
+    "login.title":"အကောင့်ဝင်ပါ",
+    "login.instruction":"India's first wireless wireless\ncar cleaning company",
+
+    "home.instruction":"ကျေးဇူးပြု၍ကျွန်ုပ်တို့၏ဝန်ဆောင်မှုကို အဆင့်သတ်မှတ်ပေးပါ",
+    "home.done.btn":"လုပ်ဆောင်မည်",
+    "home.remark":"အကြံပြုချက်များကို ရိုက်ထည့်နိုင်ပါသည်",
+
+    "profile.title": "ကျွန်ုပ် ပရိုဖိုင်",
+    "profile.email":"Email",
+    "profile.logout.confirm": "အကောင့်ထွက်ရန်သေချာပြီလား?",
+
+    "offline.status": "အင်တာနက် ပိတ်ထားသည်, ဆာဗာကို ဆက်သွယ်၍ မရပါ!"
+
+}

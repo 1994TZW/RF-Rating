@@ -1,0 +1,38 @@
+{
+    "btn.cancel": "Cancel",
+    "btn.ok": "Ok",
+    "btn.logout": "Logout",
+    "btn.save": "Save",
+    "btn.request": "Request",
+    "btn.apply": "Apply",
+    "btn.add":"Add",
+    "btn.update":"Update",
+    "btn.print":"Print",
+    "btn.download": "Download",
+    "btn.new":"Add New",
+
+    "app.app_upgrade":"Download App Update",
+    "app.latest_version":"Latest Version",
+
+    "language.selection.title":"Please select your language",
+
+    "login.email":"Email",
+    "login.email_empty":"Please enter your email",
+    "login.password":"Password",
+    "login.password_empty":"Please enter your password",
+    "login.btn":"Login",
+    "login.forgot_password":"Forgot Password ?",
+    "login.title":"Log in",
+    "login.instruction":"India's first wireless wireless\ncar cleaning company",
+    
+    "home.instruction":"Please Rate Our Service",
+    "home.done.btn":"Done",
+    "home.remark":"Please type in any suggestions",
+
+    "profile.title":"Profile",
+    "profile.email":"Email",
+    "profile.logout.confirm":"Are you sure want to logout?",
+
+    "offline.status":"Offline, unable to connect to server!"
+
+}
